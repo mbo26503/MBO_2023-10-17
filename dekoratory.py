@@ -17,4 +17,4 @@ def hej():
 hej()
 
 
-Nie Działa
+#Nie Działa
