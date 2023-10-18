@@ -35,3 +35,74 @@ a %= 2
 print('a=',a)
 
 
+#================
+# 2023/10/23
+print("===============================")
+imiona = ["Radek", "Zenek", "Monika"]
+print(imiona)  # ['Radek', 'Zenek', 'Monika']
+print(type(imiona))  # <class 'list'>
+
+for p in imiona:
+    print(p)
+# Radek
+# Zenek
+# Monika
+
+for p in enumerate(imiona):  # enumrate zwraca tuple
+    print(p)  # (1, 'Zenek')
+print('-----------')
+for pozycja, osoba in enumerate(imiona):
+    print(pozycja, osoba) # 1 Zenek
+print('-----------')
+for pozycja, osoba in enumerate(imiona, start=1):
+    print(pozycja, osoba)
+print('-----------')
+print(imiona.index("Radek"))  # 0
+
+ludzie = ['Radek', 'Janek', 'Asia', 'Michał'] #, 'Tadek']
+wiek = [47, 67, 32, 34]
+for i in ludzie:
+    print(i, wiek[ludzie.index(i)])
+
+# jeśli do ludzie dodamy "Tadek" to będzie błąd, bo różne długości list
+
+# zip() - łączy kolekcje
+print('-----------')
+for l, w in zip(ludzie, wiek):  # uwaga, połączył dwie listy różnych długości
+    print(l,w)
+
+
+print('=====================')
+from itertools import zip_longest  # pobierać z oficjalnego repozytorium Python, sprawdzać sumy kontrolne bibliotek
+zipped = zip_longest(ludzie, wiek, fillvalue='Nan')
+print(type(zipped))  # <class 'itertools.zip_longest'>
+
+for item in zipped:
+    print(item)  # ('Tadek', 'Nan')
+
+print(zipped)  # <itertools.zip_longest object at 0x0000025F16312480>
+
+for name, age in zipped:
+    print("Zaczynam drugą pętlę")
+    for (name, age) in zipped:
+        print(name, age)
+#  druba pętla się nie wykonała
+# ctrl / - komentaowani linii
+# aby wykonać drubą pętlę trzeba zrobić listę
+zipped_list = list(zipped)
+print("Zaczynam drugą pętlę")
+for (name, age) in zipped_list:
+    print(name, age)
+print('-----------')
+c = {'name': 'Radek', 'age': 5}  # słownik
+print({v: k for k, v in c.items()})  # {'Radek': 'name', 5: 'age'}
+# to samo co:
+d = {}
+for k, v in c.items():
+    d[v] = k
+print(d)  # {'Radek': 'name', 5: 'age'}
+
+names = ['John', 'Alice', 'Bob']
+age = [25, 30, 35]
+people = [(name, age) for name, age in zip(names, age]
+print(people)
