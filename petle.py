@@ -102,7 +102,7 @@ for k, v in c.items():
     d[v] = k
 print(d)  # {'Radek': 'name', 5: 'age'}
 
-names = ['John', 'Alice', 'Bob']
+name = ['John', 'Alice', 'Bob']
 age = [25, 30, 35]
-people = [(name, age) for name, age in zip(names, age]
+people = [(name, age) for name, age in zip(name, age]
 print(people)
