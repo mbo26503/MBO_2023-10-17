@@ -28,8 +28,9 @@ b1.sail()
 # błąd jest wyżej
 b1.speedomenter()
 b1.__speed = 0
+print('---------')
 b1.speedomenter()  # Speed in knots 60
-print(b1.__speed)  # pokazue 0
+print(b1.__speed)  # pokazuje 0
 
 
 
