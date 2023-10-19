@@ -1,3 +1,6 @@
+
+from typing import Optional
+
 class Sample:
     def __init__(
             self,
