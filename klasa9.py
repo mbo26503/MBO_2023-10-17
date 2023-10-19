@@ -1,7 +1,7 @@
 import pickle
 from dataclasses import dataclass
 
-@dataclass  # dekorator, automatycznie kodał do klasy konstruktor na podstawie pól z wywołania
+@dataclass  # dekorator, automatycznie dodał do klasy konstruktor na podstawie pól z wywołania
 # bez tego dekoratora jest błąd:
 #Traceback (most recent call last):
 #  File "C:\Users\CSComarch\PycharmProjects\pythonProject\MBO_2023-10-17\klasa9.py", line 14, in <module>

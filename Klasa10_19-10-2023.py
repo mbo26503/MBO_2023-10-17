@@ -19,8 +19,9 @@ for person in p:
     print(pickle.dumps(person))
 # b'\x80\x04\x95N\x00\x00\x00\x00\x00\x00\x00\x8c\x06klasa9\x94\x8c\x06Person\x94\x93\x94)\x81\x94}\x94(\x8c\nfirst_name\x94\x8c\x06Mateus\x94\x8c\tlast_name\x94\x8c\x05Zegar\x94\x8c\x02id\x94K\x02ub.'
     print('------------')
+    sd = pickle.dumps(person)
     print(sd)  # zserializowany obiekt
-    print(pickle.loads(sd))  # zdeserializowany obiekt
+    print(pickle.loads(sd))  # zdeserializowany obiekt: Person(first_name='Mateusz', last_name='Zegar', id=2)
 
 
 
