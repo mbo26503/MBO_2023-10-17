@@ -16,6 +16,11 @@ print(p)  # [Person(first_name='Jacek', last_name='Kowalski', id=1), Person(firs
 print(type(p))  # <class 'list'>
 for person in p:
     person.greet()
+    print(pickle.dumps(person))
+# b'\x80\x04\x95N\x00\x00\x00\x00\x00\x00\x00\x8c\x06klasa9\x94\x8c\x06Person\x94\x93\x94)\x81\x94}\x94(\x8c\nfirst_name\x94\x8c\x06Mateus\x94\x8c\tlast_name\x94\x8c\x05Zegar\x94\x8c\x02id\x94K\x02ub.'
+    print('------------')
+    print(sd)  # zserializowany obiekt
+    print(pickle.loads(sd))  # zdeserializowany obiekt
 
 
 
