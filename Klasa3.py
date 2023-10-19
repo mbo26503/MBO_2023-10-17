@@ -35,3 +35,4 @@ print("prints : ")
 print(s.all_contacts)
 s.order("kawa")
 pprint(c1.all_contacts)
+# !r Adam -> 'Adam'
