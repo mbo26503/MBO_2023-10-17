@@ -32,15 +32,16 @@ class BoundedCounter(Counter):
     def drukuj(self):
         print("Drukuję...", self.values)
 
+
 # po dodaniu @abstactmethod
 # TypeError: Can't instantiate abstract class Counter without an
 # implementacion for abstract  method 'druku'
 
-#c = Counter()
-#c.increment()
-#print(c)  # <__main__.Counter object at 0x00000224FF77D340>
-#c.drukuj()  # nic nie wydrukowało bo pass w metodzie drukuj
-#po wykomentowaniu powyższego działa
+# c = Counter()
+# c.increment()
+# print(c)  # <__main__.Counter object at 0x00000224FF77D340>
+# c.drukuj()  # nic nie wydrukowało bo pass w metodzie drukuj
+# po wykomentowaniu powyższego działa
 
 print('---------')
 b = BoundedCounter()
@@ -53,5 +54,3 @@ d = BoundedCounter.from_counter(b)
 d.drukuj()
 print(d.format_string())  # %d
 print(BoundedCounter.format_string())
-
-
