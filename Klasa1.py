@@ -5,6 +5,7 @@
 import math
 
 class MyFirstClass:
+    # dokumentacja
     """
     Repreentuje punkty x i y
     """
@@ -18,7 +19,7 @@ class MyFirstClass:
         :return:
         """
 
-        self.move(x, y)
+        self.move(x, y)  # wywołanie metody move
 
     def move(self, x: float, y: float) -> None:
         self.x = x
@@ -27,7 +28,7 @@ class MyFirstClass:
     def reset(self):
         self.move(0, 0)
 
-    def calculate(self, other: "MyFirstClass") -> float:
+    def calculate(self, other: "MyFirstClass") -> float:  # bez adnotacji fl
         return math.hypot(self.x - other.x, self.y - other.y)
 
     # reprezentacja obbiektu w sposób czytelny
