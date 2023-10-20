@@ -11,7 +11,7 @@ def home():
 
 
 @app.route("/salvador:")
-def salvador():
+def salvador():  # podstrona http://127.0.0.1/salvador
     return "hello Salvador"
 
 
